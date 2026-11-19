@@ -1,0 +1,6 @@
+# Local development server script
+server.ps1
+
+# OS generated files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Panel Administrador Demo | CT Global Rent a Car</title>
+
+  <!-- Google Fonts: Open Sans & Cormorant Garamond fallback -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+
+  <!-- Brand Webfonts & Main Styles -->
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" type="image/png" href="assets/images/logo-globe.png" />
+</head>
+<body style="background-color: var(--color-navy-tint);">
+
+  <!-- ========================================================================
+       1. ADMIN HEADER BAR
+       ======================================================================== -->
+  <header class="navbar" style="border-bottom: 2px solid var(--color-gold);">
+    <div class="container navbar-inner">
+      <div class="brand-logo">
+        <img src="assets/images/logo-globe.png" alt="CT Global Emblem" class="brand-globe" />
+        <div class="brand-wordmark">
+          <div class="brand-wordmark-top">
+            <span class="brand-ct">CT</span>
+            <span class="brand-global">GLOBAL</span>
+          </div>
+          <span class="brand-sub">PANEL ADMINISTRADOR</span>
+        </div>
+      </div>
+
+      <div class="nav-actions">
+        <button type="button" class="btn btn-gold" onclick="openAdminNewRentalForCar('agya')">
+          + Nueva Renta / Asignar Auto
+        </button>
+        <button type="button" class="btn btn-outline-navy" onclick="resetDemoData()">
+          🔄 Restaurar 3 Clientes Demo
+        </button>
+        <a href="index.html" class="btn btn-navy">
+          👤 Ir a Vista Cliente →
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       2. DEDICATED ADMIN DASHBOARD CONTENT
+       ======================================================================== -->
+  <main class="admin-section">
+    <div class="container">
+      <!-- Admin Top Banner -->
+      <div class="admin-header-banner">
+        <div>
+          <span class="hero-badge" style="margin-bottom: 0.6rem;">
+            <span class="hero-badge-dot"></span>
+            Administración Interna de Flota · CT Global Rent a Car
+          </span>
+          <h1 class="admin-banner-title">Control de Flota, Clientes y Ubicación en Tiempo Real</h1>
+          <p class="admin-banner-sub">
+            Visualizá quién tiene cada vehículo, dónde se encuentra en Nicaragua y por cuántos días. Cualquier cambio aquí actualiza la disponibilidad que ve el cliente.
+          </p>
+        </div>
+      </div>
+
+      <!-- 4 Live KPIs -->
+      <div class="admin-kpi-grid">
+        <div class="admin-kpi-card">
+          <div class="admin-kpi-icon">🚘</div>
+          <div>
+            <div class="admin-kpi-value" id="kpiTotalCars">7 Autos</div>
+            <div class="admin-kpi-label">Flota Total 2026</div>
+          </div>
+        </div>
+
+        <div class="admin-kpi-card">
+          <div class="admin-kpi-icon">👥</div>
+          <div>
+            <div class="admin-kpi-value" id="kpiActiveRentals">3 Activas</div>
+            <div class="admin-kpi-label">Clientes con Vehículo</div>
+          </div>
+        </div>
+
+        <div class="admin-kpi-card">
+          <div class="admin-kpi-icon">✅</div>
+          <div>
+            <div class="admin-kpi-value" id="kpiAvailableCars">4 Libres</div>
+            <div class="admin-kpi-label">Disponibles en Patio</div>
+          </div>
+        </div>
+
+        <div class="admin-kpi-card">
+          <div class="admin-kpi-icon">💲</div>
+          <div>
+            <div class="admin-kpi-value" id="kpiActiveRevenue">$840</div>
+            <div class="admin-kpi-label">Monto en Rentas Activas</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Block A: Active Demo Clients Cards (3 Demo People + any new bookings) -->
+      <div class="admin-block-header">
+        <div>
+          <h2 class="admin-block-title">Clientes con Vehículos Asignados (Rentas Activas)</h2>
+          <p style="font-size: 0.9rem; color: var(--text-muted);">
+            Hacé clic en <strong>"Editar / Ubicación"</strong> en cualquiera de los clientes para cambiar el auto, dónde se encuentra o los días de alquiler.
+          </p>
+        </div>
+      </div>
+
+      <div class="admin-clients-grid" id="adminClientsContainer"></div>
+
+      <!-- Block B: Complete 7-Vehicle Fleet Radar & Location Table -->
+      <div class="admin-block-header">
+        <div>
+          <h2 class="admin-block-title">Estado General y Ubicación de Toda la Flota (7 Vehículos)</h2>
+          <p style="font-size: 0.9rem; color: var(--text-muted);">
+            Control general de cada unidad, quién la tiene asignada, ubicación actual en Nicaragua y duración.
+          </p>
+        </div>
+      </div>
+
+      <div class="admin-table-card">
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>Vehículo &amp; Placa</th>
+              <th>Estado</th>
+              <th>¿Quién lo tiene? (Cliente)</th>
+              <th>¿Dónde se encuentra el auto? (Ubicación)</th>
+              <th>Por cuántos días &amp; Fechas</th>
+              <th>Acción</th>
+            </tr>
+          </thead>
+          <tbody id="adminFleetTableBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <!-- ========================================================================
+       ADMIN EDIT / ASSIGN VEHICLE & LOCATION MODAL
+       ======================================================================== -->
+  <div class="modal-overlay" id="adminEditModal" role="dialog" aria-modal="true">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3 class="modal-title" id="adminModalTitle">Editar Renta &amp; Ubicación de Flota</h3>
+        <button type="button" class="modal-close" onclick="closeAdminEditModal()" aria-label="Cerrar">×</button>
+      </div>
+      <div class="modal-body">
+        <form id="adminEditForm">
+          <input type="hidden" id="adminRentalId" />
+
+          <div class="form-grid">
+            <div class="form-group full-width">
+              <label for="adminVehicleSelect">Vehículo de la Flota</label>
+              <select id="adminVehicleSelect" class="form-control"></select>
+            </div>
+
+            <div class="form-group">
+              <label for="adminClientName">¿Quién tiene el auto? (Cliente)</label>
+              <input type="text" id="adminClientName" class="form-control" required />
+            </div>
+
+            <div class="form-group">
+              <label for="adminClientRole">Tipo de Viaje / Empresa</label>
+              <input type="text" id="adminClientRole" class="form-control" placeholder="Ej. Ejecutivo / Turismo Familiar" />
+            </div>
+
+            <div class="form-group">
+              <label for="adminClientPhone">Teléfono del Cliente</label>
+              <input type="text" id="adminClientPhone" class="form-control" required />
+            </div>
+
+            <div class="form-group">
+              <label for="adminClientDoc">Cédula / Pasaporte</label>
+              <input type="text" id="adminClientDoc" class="form-control" required />
+            </div>
+
+            <div class="form-group full-width">
+              <label for="adminCurrentLocation">📍 ¿Dónde se encuentra el auto ahora mismo? (Ubicación / Ruta)</label>
+              <input type="text" id="adminCurrentLocation" class="form-control" placeholder="Ej. Estelí · Km 148 Carretera Norte" required />
+            </div>
+
+            <div class="form-group">
+              <label for="adminPickupPoint">Punto de Entrega VIP</label>
+              <input type="text" id="adminPickupPoint" class="form-control" />
+            </div>
+
+            <div class="form-group">
+              <label for="adminStatusSelect">Estado de la Renta</label>
+              <select id="adminStatusSelect" class="form-control">
+                <option value="En Renta">En Renta (Activo)</option>
+                <option value="Reservado / En Ruta">Reservado / En Ruta</option>
+                <option value="Entrega VIP Programada">Entrega VIP Programada</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="adminStartDate">Fecha de Inicio</label>
+              <input type="date" id="adminStartDate" class="form-control" required />
+            </div>
+
+            <div class="form-group">
+              <label for="adminEndDate">Fecha de Devolución</label>
+              <input type="date" id="adminEndDate" class="form-control" required />
+            </div>
+          </div>
+
+          <div class="modal-summary-bar">
+            <span id="adminModalSummary">Calculando días y tarifa...</span>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-navy" onclick="closeAdminEditModal()">Cancelar</button>
+            <button type="submit" class="btn btn-gold">Guardar Cambios en Flota</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast-msg" id="toastMsg" role="status" aria-live="polite"></div>
+
+  <!-- Discreet Floating Demo Switcher (For Presentation Switch Between Client View and Admin View) -->
+  <div class="demo-floating-switcher" aria-label="Selector de entorno demo">
+    <a href="index.html" class="demo-switch-link">
+      👤 Vista Cliente
+    </a>
+    <a href="admin.html" class="demo-switch-link active">
+      🔒 Vista Administrador
+    </a>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

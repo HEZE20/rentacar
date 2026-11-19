@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CT Global Rent a Car | Renta de Vehículos en Managua, Nicaragua</title>
+  <meta name="description" content="CT Global Rent a Car es una empresa nicaragüense dedicada a la renta de vehículos económicos, sedanes, SUV y pickups 2026 para uso personal y empresarial en Managua, Nicaragua." />
+
+  <!-- Google Fonts: Open Sans & Cormorant Garamond fallback -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+
+  <!-- Brand Webfonts (Breathing + Traditional Arabic) & Main Styles -->
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" type="image/png" href="assets/images/logo-globe.png" />
+</head>
+<body>
+
+  <!-- ========================================================================
+       1. TOP EXECUTIVE BAR (100% CUSTOMER-FACING)
+       ======================================================================== -->
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div class="topbar-items">
+        <span class="topbar-item">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          Managua, Nicaragua · Cobertura Nacional
+        </span>
+        <span class="topbar-item">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <a href="tel:+50589318989">+505 8931 8989</a>
+        </span>
+        <span class="topbar-item">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          <a href="mailto:cs@ctglobal-services.com">cs@ctglobal-services.com</a>
+        </span>
+      </div>
+      <div class="topbar-right">
+        <span style="font-size: 0.78rem; color: #f6cd82; font-weight: 700;">
+          ✈️ Entrega VIP en Aeropuerto (MGA), Hoteles y Domicilio
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       2. STICKY NAVBAR (CUSTOMER NAVIGATION ONLY)
+       ======================================================================== -->
+  <header class="navbar" id="navbar">
+    <div class="container navbar-inner">
+      <div class="brand-logo" data-screen-target="inicio" role="button" tabindex="0" aria-label="Ir a Inicio">
+        <img src="assets/images/logo-globe.png" alt="CT Global Emblem" class="brand-globe" />
+        <div class="brand-wordmark">
+          <div class="brand-wordmark-top">
+            <span class="brand-ct">CT</span>
+            <span class="brand-global">GLOBAL</span>
+          </div>
+          <span class="brand-sub">RENT A CAR</span>
+        </div>
+      </div>
+
+      <nav class="nav-links" id="navLinks" aria-label="Navegación principal">
+        <button type="button" class="nav-tab-btn active" data-screen-target="inicio">
+          Inicio
+        </button>
+        <button type="button" class="nav-tab-btn" data-screen-target="flota">
+          Nuestra Flota
+        </button>
+        <button type="button" class="nav-tab-btn" data-screen-target="nosotros">
+          Empresa &amp; Servicios
+        </button>
+        <button type="button" class="nav-tab-btn" data-screen-target="contacto">
+          Contacto
+        </button>
+      </nav>
+
+      <div class="nav-actions">
+        <button type="button" class="btn btn-gold" data-screen-target="flota">
+          📅 Verificar Disponibilidad
+        </button>
+
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir menú">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       PANTALLA 1: INICIO (CUSTOMER HOME)
+       ======================================================================== -->
+  <main class="app-screen active" id="screen-inicio">
+    <section class="hero">
+      <div class="container hero-grid">
+        <!-- Left Column -->
+        <div class="hero-copy">
+          <div class="hero-badge">
+            <span class="hero-badge-dot"></span>
+            Flota 2026 · Managua, Nicaragua
+          </div>
+
+          <h1 class="hero-title">
+            Más que autos,
+            <span class="gold-serif">entregamos libertad<span class="script-word">CT</span></span>
+          </h1>
+
+          <p class="hero-description">
+            Soluciones de transporte confiables, seguras y eficientes para viajes personales, familiares y empresariales en toda Nicaragua. Recibí tu vehículo con <strong>tanque lleno</strong> y <strong>entrega VIP</strong> donde lo necesités.
+          </p>
+
+          <div class="hero-cta-group">
+            <button type="button" class="btn btn-gold" data-screen-target="flota">
+              Explorar Flota 2026 →
+            </button>
+            <button type="button" class="btn btn-outline-white" data-screen-target="contacto">
+              Atención Personalizada
+            </button>
+          </div>
+
+          <div class="hero-metrics">
+            <div>
+              <div class="hero-metric-value">7 Modelos</div>
+              <div class="hero-metric-label">Flota Oficial 2026</div>
+            </div>
+            <div>
+              <div class="hero-metric-value">Desde $35</div>
+              <div class="hero-metric-label">Tarifa Diaria Clara</div>
+            </div>
+            <div>
+              <div class="hero-metric-value">Entrega VIP</div>
+              <div class="hero-metric-label">Tanque Lleno Garantizado</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Studio Showroom Pod -->
+        <div class="hero-showcase">
+          <div class="hero-stage-card">
+            <div class="hero-stage-top">
+              <span class="hero-car-category" id="heroCarCategory">Pickup 4x4</span>
+              <span class="hero-car-price-pill" id="heroCarPrice">$85 / día</span>
+            </div>
+            <h2 class="hero-car-name" id="heroCarName">Toyota Hilux Intermedia 2026</h2>
+
+            <div class="hero-car-frame">
+              <img
+                src="assets/images/car-hilux.png"
+                alt="Toyota Hilux Intermedia 2026"
+                class="hero-car-img"
+                id="heroCarImg"
+              />
+            </div>
+
+            <div class="hero-car-specs">
+              <span class="hero-spec-chip">
+                👥 <span id="heroSpec1">5 Pasajeros</span>
+              </span>
+              <span class="hero-spec-chip">
+                ❄️ <span id="heroSpec2">Amplia Tina</span>
+              </span>
+              <span class="hero-spec-chip">
+                ✨ <span id="heroSpec3">Trabajo Exigente</span>
+              </span>
+            </div>
+
+            <div class="hero-switcher" role="tablist" aria-label="Destacados de la flota" style="margin-bottom: 0.75rem;">
+              <button type="button" class="hero-switch-btn active">Hilux 2026</button>
+              <button type="button" class="hero-switch-btn">Rush 7 Pax</button>
+              <button type="button" class="hero-switch-btn">Raize SUV</button>
+              <button type="button" class="hero-switch-btn">Yaris Sedán</button>
+            </div>
+
+            <button type="button" class="btn btn-gold" id="heroCheckBtn" style="width: 100%; padding: 0.65rem;">
+              📅 Verificar Disponibilidad de este Vehículo
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Floating Quick Date Search Bar -->
+    <div class="container quick-bar-wrapper">
+      <div class="quick-bar">
+        <div class="quick-field">
+          <span class="quick-label">📅 Fecha de Recogida</span>
+          <input type="date" id="homeStartDate" class="quick-input" aria-label="Fecha de Recogida" />
+        </div>
+
+        <div class="quick-field">
+          <span class="quick-label">📅 Fecha de Devolución</span>
+          <input type="date" id="homeEndDate" class="quick-input" aria-label="Fecha de Devolución" />
+        </div>
+
+        <div class="quick-field">
+          <span class="quick-label">🚘 Categoría de Vehículo</span>
+          <select class="quick-select" id="homeCategorySelect" aria-label="Categoría de Vehículo">
+            <option value="all">Toda la Flota 2026 (7 modelos)</option>
+            <option value="economico">Económicos ($35 - $40/día)</option>
+            <option value="sedan">Sedán Ejecutivo ($45/día)</option>
+            <option value="suv">SUV &amp; Familiar 7 Pax ($50 - $70/día)</option>
+            <option value="pickup">Pickup / Camioneta 4x4 ($85/día)</option>
+          </select>
+        </div>
+
+        <div class="quick-field">
+          <span class="quick-label">📍 Entrega VIP</span>
+          <select class="quick-select" aria-label="Lugar de Entrega VIP">
+            <option>Aeropuerto Internacional MGA</option>
+            <option>Managua Centro / Hotel</option>
+            <option>Entrega VIP a Domicilio</option>
+          </select>
+        </div>
+
+        <button type="button" class="btn btn-navy" id="homeSearchBtn">
+          Buscar Vehículos →
+        </button>
+      </div>
+    </div>
+
+    <!-- Customer Value Propositions on Home -->
+    <section class="home-hub-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Experiencia CT Global</span>
+          <h2 class="section-title">¿Por qué elegir <span class="script-accent">CT Global</span>?</h2>
+          <p class="section-subtitle">
+            Variedad de vehículos modernos, atención personalizada y máxima flexibilidad para tus viajes personales o empresariales en Nicaragua.
+          </p>
+        </div>
+
+        <div class="hub-cards-grid">
+          <div class="hub-card">
+            <div>
+              <div class="hub-card-icon">🚘</div>
+              <h3 class="hub-card-title">Flota Moderna 2026</h3>
+              <p class="hub-card-text">
+                Desde compactos económicos hasta SUVs familiares de 3 filas y camionetas pickup para todo tipo de recorrido.
+              </p>
+            </div>
+            <button type="button" class="btn btn-navy" data-screen-target="flota">
+              Ver Catálogo de Vehículos →
+            </button>
+          </div>
+
+          <div class="hub-card">
+            <div>
+              <div class="hub-card-icon">✈️</div>
+              <h3 class="hub-card-title">Entrega VIP &amp; Tanque Lleno</h3>
+              <p class="hub-card-text">
+                Recibí tu vehículo revisado, seguro y con tanque lleno en el lugar que necesités para comenzar tu viaje sin esperas.
+              </p>
+            </div>
+            <button type="button" class="btn btn-gold" data-screen-target="nosotros">
+              Ver Beneficios y Requisitos →
+            </button>
+          </div>
+
+          <div class="hub-card">
+            <div>
+              <div class="hub-card-icon">📞</div>
+              <h3 class="hub-card-title">Cotización Rápida y Directa</h3>
+              <p class="hub-card-text">
+                Atención personalizada para reservas individuales, turismo familiar o flotas corporativas en Managua y toda Nicaragua.
+              </p>
+            </div>
+            <button type="button" class="btn btn-outline-navy" data-screen-target="contacto">
+              Contactar Ahora →
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       PANTALLA 2: NUESTRA FLOTA (MINIMAL CARDS + "VERIFICAR DISPONIBILIDAD")
+       ======================================================================== -->
+  <section class="app-screen" id="screen-flota">
+    <div class="fleet-screen-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Catálogo Oficial 2026</span>
+          <h2 class="section-title">Nuestra Flota de <span class="script-accent">Vehículos</span></h2>
+          <p class="section-subtitle">
+            Seleccioná el vehículo de tu interés y hacé clic en <strong>"Verificar Disponibilidad"</strong> para ver todas sus cualidades, consultar fechas disponibles y reservar.
+          </p>
+        </div>
+
+        <!-- Category Tabs -->
+        <div class="fleet-filters" role="tablist">
+          <button type="button" class="filter-tab active" data-filter="all">Todos (7)</button>
+          <button type="button" class="filter-tab" data-filter="economico">Económicos (2)</button>
+          <button type="button" class="filter-tab" data-filter="sedan">Sedán (1)</button>
+          <button type="button" class="filter-tab" data-filter="suv">SUV &amp; Familiar (3)</button>
+          <button type="button" class="filter-tab" data-filter="pickup">Camionetas / Pickup (1)</button>
+        </div>
+
+        <!-- Minimal 7 Vehicle Cards Container -->
+        <div class="fleet-grid" id="fleetGridContainer"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       PANTALLA 3: EMPRESA, SERVICIOS, BENEFICIOS & REQUISITOS
+       ======================================================================== -->
+  <section class="app-screen" id="screen-nosotros">
+    <div class="about-section">
+      <div class="container">
+        <div class="about-top-grid">
+          <div class="about-visual">
+            <div class="about-photo-frame">
+              <img src="assets/images/about-parking.png" alt="Flota CT Global Rent a Car en Nicaragua" />
+            </div>
+            <div class="about-overlay-badge">
+              <span class="badge-title">CTGLOBAL</span>
+              <span class="badge-sub">Rent a Car · Nicaragua</span>
+            </div>
+          </div>
+
+          <div class="about-content">
+            <span class="section-eyebrow">Identidad Corporativa</span>
+            <h2 class="section-title" style="text-align: left;">Sobre <span class="script-accent">Nosotros</span></h2>
+            <p class="about-lead">
+              CT Global Rent a Car es una empresa nicaragüense dedicada a la renta de vehículos, orientada a brindar soluciones de transporte confiables, seguras y eficientes para quienes nos eligen.
+            </p>
+            <p class="about-text">
+              Nuestro compromiso está enfocado en el cumplimiento, la calidad del servicio y la satisfacción del cliente.
+            </p>
+
+            <div class="corp-info-card">
+              <div class="corp-info-header">
+                <h3>Información general de la empresa</h3>
+                <span style="font-size: 0.74rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-gold-light); font-weight: 700;">Ficha Oficial</span>
+              </div>
+              <div class="corp-row">
+                <div class="corp-key">Nombre comercial</div>
+                <div class="corp-val">CT Global Rent a Car</div>
+              </div>
+              <div class="corp-row">
+                <div class="corp-key">Actividad comercial</div>
+                <div class="corp-val">Alquiler de vehículos</div>
+              </div>
+              <div class="corp-row">
+                <div class="corp-key">Ubicación</div>
+                <div class="corp-val">Managua, Nicaragua</div>
+              </div>
+              <div class="corp-row">
+                <div class="corp-key">Sector</div>
+                <div class="corp-val">Transporte y servicios de alquiler</div>
+              </div>
+              <div class="corp-row">
+                <div class="corp-key">Servicio principal</div>
+                <div class="corp-val">Renta de vehículos para uso personal y empresarial</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Visión & Misión -->
+        <div class="vision-mission-box">
+          <img src="assets/images/banner-suvs.png" alt="Flota SUV CT Global Rent a Car" class="vm-banner-img" />
+          <div class="vm-grid">
+            <div>
+              <div class="vm-card-header">
+                <div class="vm-icon">👁️</div>
+                <h3 class="vm-title">Visión</h3>
+              </div>
+              <p>
+                Ser una empresa líder en el servicio de renta vehicular, reconocida por la calidad del servicio, la confiabilidad de nuestra flota y el compromiso con nuestros clientes, consolidándonos como un aliado estratégico en soluciones de movilidad a nivel nacional.
+              </p>
+            </div>
+            <div class="vm-divider"></div>
+            <div>
+              <div class="vm-card-header">
+                <div class="vm-icon">🎯</div>
+                <h3 class="vm-title">Misión</h3>
+              </div>
+              <p>
+                Brindar servicios de renta de vehículos en Nicaragua, ofreciendo óptimas condiciones operativas, con cumplimiento de los términos contractuales, tarifas competitivas y atención profesional, orientados a satisfacer las necesidades de movilidad de nuestros usuarios.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Nuestros Servicios -->
+        <div class="section-header">
+          <span class="section-eyebrow">Soluciones de Movilidad</span>
+          <h2 class="section-title">Nuestros <span class="script-accent">Servicios</span></h2>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon">🚗</div>
+            <h3 class="service-title">Alquiler de vehículos económicos</h3>
+            <p class="service-desc">Opciones prácticas y cómodas para movilizarse por la ciudad y realizar actividades cotidianas.</p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">🛻</div>
+            <h3 class="service-title">Alquiler de camionetas</h3>
+            <p class="service-desc">Alternativas para trabajos, actividades comerciales y necesidades de transporte.</p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">🚙</div>
+            <h3 class="service-title">Alquiler de SUV</h3>
+            <p class="service-desc">Vehículos espaciosos y versátiles para viajes, familias y aventuras.</p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">🚐</div>
+            <h3 class="service-title">Alquiler de vehículos amplios</h3>
+            <p class="service-desc">Opciones para grupos, familias y necesidades de mayor capacidad.</p>
+          </div>
+        </div>
+
+        <!-- Beneficios & Requisitos -->
+        <div class="ben-req-layout">
+          <div class="panel-card">
+            <h3 class="panel-title">Beneficios</h3>
+            <p class="panel-desc">Estándares incluidos en cada entrega de vehículo:</p>
+            <div class="benefits-list">
+              <div class="benefit-item">
+                <div class="benefit-icon">✓</div>
+                <h4 class="benefit-name">Brindamos comodidad</h4>
+                <p class="benefit-text">Nos encargamos de que tu experiencia sea cómoda desde el primer kilómetro.</p>
+              </div>
+              <div class="benefit-item">
+                <div class="benefit-icon">✓</div>
+                <h4 class="benefit-name">Seguridad garantizada</h4>
+                <p class="benefit-text">Vehículos revisados y en excelentes condiciones para que manejes con tranquilidad en cada viaje.</p>
+              </div>
+              <div class="benefit-item">
+                <div class="benefit-icon">✓</div>
+                <h4 class="benefit-name">Entrega VIP</h4>
+                <p class="benefit-text">Más facilidad para vos: entregamos tu vehículo en el lugar que necesités.</p>
+              </div>
+              <div class="benefit-item">
+                <div class="benefit-icon">✓</div>
+                <h4 class="benefit-name">Tanque lleno</h4>
+                <p class="benefit-text">Recibí tu vehículo preparado para la aventura, con tanque lleno para comenzar tu recorrido sin esperar.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel-card navy-panel">
+            <h3 class="panel-title">Requisitos</h3>
+            <p class="panel-desc">3 requisitos simples para formalizar tu alquiler:</p>
+            <div class="req-steps">
+              <div class="req-step">
+                <span class="req-num">1</span>
+                <div>
+                  <h4 class="req-step-title">Documento de identidad</h4>
+                  <p class="req-step-desc">Cédula de identidad o pasaporte.</p>
+                </div>
+              </div>
+              <div class="req-step">
+                <span class="req-num">2</span>
+                <div>
+                  <h4 class="req-step-title">Licencia de conducir</h4>
+                  <p class="req-step-desc">Vigente y en buen estado.</p>
+                </div>
+              </div>
+              <div class="req-step">
+                <span class="req-num">3</span>
+                <div>
+                  <h4 class="req-step-title">Depósito y Pago de alquiler</h4>
+                  <p class="req-step-desc">Según las condiciones de tu reserva.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       PANTALLA 4: CONTACTO DIRECTO & QR INSTAGRAM
+       ======================================================================== -->
+  <section class="app-screen" id="screen-contacto">
+    <div class="contact-section">
+      <div class="container">
+        <div class="contact-card">
+          <div>
+            <span class="section-eyebrow">Atención Personalizada</span>
+            <h2 class="section-title" style="text-align: left;">Contacto <span class="script-accent">Oficial</span></h2>
+            <p class="section-subtitle" style="text-align: left;">
+              Comunicate directamente con nuestro equipo en Managua, Nicaragua para cotizaciones personales o corporativas.
+            </p>
+
+            <div class="contact-channels">
+              <a href="https://wa.me/50589318989" target="_blank" rel="noopener" class="channel-item">
+                <span class="channel-icon">📞</span>
+                <div>
+                  <span class="channel-label">Teléfono &amp; WhatsApp</span>
+                  <span class="channel-value">+505 8931 8989</span>
+                </div>
+              </a>
+
+              <a href="mailto:cs@ctglobal-services.com" class="channel-item">
+                <span class="channel-icon">✉️</span>
+                <div>
+                  <span class="channel-label">Correo Electrónico</span>
+                  <span class="channel-value">cs@ctglobal-services.com</span>
+                </div>
+              </a>
+
+              <a href="https://www.facebook.com/share/19JTYWDM8F/?mibextid=wwXIfr" target="_blank" rel="noopener" class="channel-item">
+                <span class="channel-icon">f</span>
+                <div>
+                  <span class="channel-label">Facebook Oficial</span>
+                  <span class="channel-value">CT Global Rent a Car</span>
+                </div>
+              </a>
+
+              <a href="https://www.instagram.com/ctglobalrentacar" target="_blank" rel="noopener" class="channel-item">
+                <span class="channel-icon">IG</span>
+                <div>
+                  <span class="channel-label">Instagram</span>
+                  <span class="channel-value">@ctglobalrentacar</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="qr-showcase">
+            <img src="assets/images/qr-instagram.png" alt="Código QR Instagram @ctglobalrentacar" />
+            <span class="qr-caption">Escaneá para seguirnos en Instagram</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       MODAL DE DETALLE COMPLETO DEL VEHÍCULO & VERIFICADOR DE DISPONIBILIDAD
+       (Opened ONLY when clicking "Verificar Disponibilidad")
+       ======================================================================== -->
+  <div class="modal-overlay" id="clientBookingModal" role="dialog" aria-modal="true">
+    <div class="modal-box modal-wide">
+      <div class="modal-header">
+        <div>
+          <span id="modalCarCategory" style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.14em; color: var(--color-gold-light); font-weight: 700; display: block;">Categoría</span>
+          <h3 class="modal-title" id="bookingModalCarTitle">Detalle y Disponibilidad</h3>
+        </div>
+        <button type="button" class="modal-close" onclick="closeClientBookingModal()" aria-label="Cerrar">×</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="detail-modal-grid">
+          <!-- Left Column: Full Vehicle Information & Cualidades Completas -->
+          <div class="detail-car-showcase">
+            <div class="detail-car-stage">
+              <img src="assets/images/car-agya.png" alt="Vehículo" id="modalCarImg" />
+            </div>
+
+            <div class="detail-price-row">
+              <span style="font-size: 0.84rem; font-weight: 700; color: var(--color-navy);">Tarifa de Alquiler:</span>
+              <span id="modalCarPrice" style="font-family: var(--font-global); font-size: 2rem; font-weight: 700; color: var(--color-gold); line-height: 1;">$35 / día</span>
+            </div>
+
+            <div class="detail-qualities-title">Cualidades Completas del Vehículo:</div>
+            <ul class="car-qualities-list" id="modalCarQualities" style="margin-bottom: 1.1rem;"></ul>
+
+            <div style="background: var(--color-white); border-radius: 10px; padding: 0.75rem 0.9rem; font-size: 0.78rem; border: 1px solid rgba(29,51,91,0.08);">
+              <strong style="color: var(--color-navy); display: block; margin-bottom: 0.2rem;">✓ Incluye con tu reserva:</strong>
+              Tanque lleno de fábrica · Entrega VIP · Vehículo revisado y garantizado.
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive Date Availability Checker & Booking Form -->
+          <div>
+            <div class="mini-cal-wrapper" style="margin-bottom: 1.1rem;">
+              <div class="mini-cal-header">
+                <span>Disponibilidad próximos 10 días:</span>
+                <span>🟢 Libre · 🔴 Reservado</span>
+              </div>
+              <div class="mini-cal-strip" id="modalMiniCalendar"></div>
+            </div>
+
+            <form id="clientBookingForm">
+              <input type="hidden" id="bookingCarId" />
+
+              <div class="form-grid" style="margin-bottom: 0.9rem;">
+                <div class="form-group">
+                  <label for="bookingStartDate">📅 Fecha de Recogida</label>
+                  <input type="date" id="bookingStartDate" class="form-control" required />
+                </div>
+
+                <div class="form-group">
+                  <label for="bookingEndDate">📅 Fecha de Devolución</label>
+                  <input type="date" id="bookingEndDate" class="form-control" required />
+                </div>
+              </div>
+
+              <!-- Live Availability Verdict Box -->
+              <div id="bookingStatusBanner" class="car-date-status-box free-box"></div>
+
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="bookingClientName">Tu Nombre Completo</label>
+                  <input type="text" id="bookingClientName" class="form-control" placeholder="Ej. Andrea Morales" required />
+                </div>
+
+                <div class="form-group">
+                  <label for="bookingClientPhone">Teléfono / WhatsApp</label>
+                  <input type="text" id="bookingClientPhone" class="form-control" placeholder="Ej. +505 8811 2233" required />
+                </div>
+
+                <div class="form-group">
+                  <label for="bookingClientDoc">Cédula o Pasaporte</label>
+                  <input type="text" id="bookingClientDoc" class="form-control" placeholder="Ej. 001-101090-0011X" required />
+                </div>
+
+                <div class="form-group">
+                  <label for="bookingPickup">Punto de Entrega VIP</label>
+                  <select id="bookingPickup" class="form-control">
+                    <option>Aeropuerto Internacional MGA, Managua</option>
+                    <option>Entrega VIP a Domicilio / Hotel en Managua</option>
+                    <option>Oficina Principal CT Global · Managua</option>
+                  </select>
+                </div>
+
+                <div class="form-group full-width">
+                  <label for="bookingDestination">Ciudad / Destino de Viaje en Nicaragua</label>
+                  <input type="text" id="bookingDestination" class="form-control" placeholder="Ej. Granada &amp; Masaya" required />
+                </div>
+              </div>
+
+              <div class="modal-summary-bar">
+                <span id="bookingSummaryText">Duración: 3 días · Total: $105 USD</span>
+              </div>
+
+              <div class="modal-footer">
+                <button type="button" class="btn btn-outline-navy" onclick="closeClientBookingModal()">Cerrar</button>
+                <button type="submit" class="btn btn-gold" id="bookingSubmitBtn">Confirmar Reserva</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast-msg" id="toastMsg" role="status" aria-live="polite"></div>
+
+  <!-- ========================================================================
+       FOOTER (100% CUSTOMER-FACING)
+       ======================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <img src="assets/images/logo-full.png" alt="CT Global Rent a Car" class="footer-logo-img" />
+          <p class="footer-about-text">
+            Empresa nicaragüense dedicada a la renta de vehículos para uso personal y empresarial. Más que autos, entregamos libertad.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Navegación</h4>
+          <ul class="footer-links">
+            <li><button type="button" data-screen-target="inicio">Inicio</button></li>
+            <li><button type="button" data-screen-target="flota">Nuestra Flota</button></li>
+            <li><button type="button" data-screen-target="nosotros">Empresa &amp; Servicios</button></li>
+            <li><button type="button" data-screen-target="contacto">Contacto</button></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Flota 2026</h4>
+          <ul class="footer-links">
+            <li><button type="button" data-screen-target="flota">Toyota Agya 2026 ($35/día)</button></li>
+            <li><button type="button" data-screen-target="flota">Hyundai Grand i10 ($40/día)</button></li>
+            <li><button type="button" data-screen-target="flota">Toyota Yaris Sedan 2026 ($45/día)</button></li>
+            <li><button type="button" data-screen-target="flota">Toyota Raize 2026 ($50/día)</button></li>
+            <li><button type="button" data-screen-target="flota">Nissan Kicks ($50/día)</button></li>
+            <li><button type="button" data-screen-target="flota">Toyota Rush 2026 ($70/día)</button></li>
+            <li><button type="button" data-screen-target="flota">Toyota Hilux 2026 ($85/día)</button></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Contacto</h4>
+          <ul class="footer-links">
+            <li>📍 Managua, Nicaragua</li>
+            <li><a href="tel:+50589318989">📞 +505 8931 8989</a></li>
+            <li><a href="mailto:cs@ctglobal-services.com">✉️ cs@ctglobal-services.com</a></li>
+            <li><a href="https://www.facebook.com/share/19JTYWDM8F/?mibextid=wwXIfr" target="_blank" rel="noopener">Facebook Oficial</a></li>
+            <li><a href="https://www.instagram.com/ctglobalrentacar" target="_blank" rel="noopener">Instagram: @ctglobalrentacar</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 CT Global Rent a Car · Managua, Nicaragua. Todos los derechos reservados.</span>
+        <span>Renta de Vehículos Personal y Empresarial</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Discreet Floating Demo Switcher (For Presentation Switch Between Client View and Admin View) -->
+  <div class="demo-floating-switcher" aria-label="Selector de entorno demo">
+    <a href="index.html" class="demo-switch-link active">
+      👤 Vista Cliente
+    </a>
+    <a href="admin.html" class="demo-switch-link">
+      🔒 Vista Administrador
+    </a>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
